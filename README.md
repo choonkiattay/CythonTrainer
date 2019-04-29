@@ -67,13 +67,36 @@ file.
 For deployment, you are encourage to use `.so` binary files for speed
 and intellectual security. Therefore, make a new directory with same
 tree level as the original python project. Place each `.so` files into
-directories accordingly. 
+directories accordingly.
 
-**Make another python main file to call function on directory root** 
+The `.c` and `.o` in the each subdirectories and build directory are not
+useful and can be deleted.
+
+**Make another python main file to call function in binary main**
+
+
+`main_feelinglucking.py` 
 ```python
 from feelinglucky_cy import main
 main()
 ```
+
+**Your deployment package directory look like this** 
+```
+CythonTrainer-bin/
+|-- feeling_lucky.so
+|-- main_feelinglucking.py
+|-- matrix_operation
+|   |-- __init__.py
+|   |-- init.so
+|   `-- matrix_operation.so
+`-- realnumber_operation
+    |-- __init__.py
+    `-- real_operation.so
+```
+
+Notice in each python package subdirectories, `__init__.py` is present
+as we initiate the compiled code using python. 
 
 #### 4. Run with Binary files
 To run the binary file, just use the command
@@ -84,6 +107,3 @@ python main_feelinglucking.py --numbers --mode --type
 
 #### Acknowledgement
 Appreciate my friend Kin Yee Ho for passing Cython knowledge.
-
-#### TODO
-Tree Directory of binary run file
