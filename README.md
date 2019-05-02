@@ -75,7 +75,7 @@ useful and can be deleted.
 **Make another python main file to call function in binary main**
 
 
-`main_feelinglucking.py` 
+`main_feelinglucky.py` 
 ```python
 from feelinglucky_cy import main
 main()
@@ -85,7 +85,7 @@ main()
 ```
 CythonTrainer-bin/
 |-- feeling_lucky.so
-|-- main_feelinglucking.py
+|-- main_feelinglucky.py
 |-- matrix_operation
 |   |-- __init__.py
 |   |-- init.so
@@ -102,7 +102,7 @@ as we initiate the compiled code using python.
 To run the binary file, just use the command
 
 ```
-python main_feelinglucking.py --numbers --mode --type
+python main_feelinglucky.py --numbers --mode --type
 ```
 
 #### Acknowledgement
