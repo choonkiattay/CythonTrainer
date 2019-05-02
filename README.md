@@ -94,9 +94,12 @@ CythonTrainer-bin/
     |-- __init__.py
     `-- real_operation.so
 ```
+Using command below to create empty `__init__.py`
+```
+touch __init__.py
+```
 
-Notice in each python package subdirectories, `__init__.py` is present
-as we initiate the compiled code using python. 
+We initiate the compiled code using python fashion, therefore each subdirectories must have `__init__.py` to be a Python package.
 
 #### 4. Run with Binary files
 To run the binary file, just use the command
