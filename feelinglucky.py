@@ -8,6 +8,7 @@ def init_args():
     parser.add_argument('--numbers', type=int, help='Numbers of random to generate')
     parser.add_argument('--mode', type=str, help='realnumber or matrix')
     parser.add_argument('--type', type=str, help='int or float')
+    parser.print_help()
 
     return parser.parse_args()
 
